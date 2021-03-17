@@ -1,0 +1,27 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Queue {
+  id        Int         @id @default(autoincrement())
+  name      String
+  date      DateTime
+  admin_id  Int
+  QueueUser QueueUser[]
+}
+
+model QueueUser {
+  id         Int    @id @default(autoincrement())
+  queue_id   Int
+  vk_id      Int
+  first_name String
+  last_name  String
+  Queue      Queue  @relation(fields: [queue_id], references: [id])
+
+  @@index([queue_id], name: "queue_id_index")
+}
