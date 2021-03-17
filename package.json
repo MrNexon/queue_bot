@@ -1,8 +1,8 @@
 {
   "name": "queue-bot",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "Бот очередей для бесед ВКБ",
+  "author": "Efim Belyakov",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
