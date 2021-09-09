@@ -6,4 +6,9 @@ services:
     env_file:
       - "${PROJECT_DIR}/.env"
     ports:
-      - "127.0.0.0:7654:7654"
+      - "0.0.0.0:7654:7654"
+    networks:
+      - queue_app
+networks:
+  queue_app:
+    external: true
