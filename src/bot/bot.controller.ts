@@ -1,4 +1,4 @@
-import { Controller, Post, Request, Response } from '@nestjs/common';
+import { Controller, Get, Post, Request, Response } from '@nestjs/common';
 import { BotService } from './bot.service';
 
 @Controller('bot')
@@ -8,5 +8,10 @@ export class BotController {
   @Post()
   botEndpoint(@Request() req, @Response() res) {
     this.botService.bot.webhookCallback(req, res);
+  }
+
+  @Get('test')
+  botTest() {
+    return 'Hi';
   }
 }
