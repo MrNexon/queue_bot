@@ -6,4 +6,4 @@ services:
     env_file:
       - "${PROJECT_DIR}/.env"
     ports:
-      - "33335:33335"
+      - "127.0.0.1:33335:33335"
