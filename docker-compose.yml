@@ -6,4 +6,4 @@ services:
     env_file:
       - "${PROJECT_DIR}/.env"
     ports:
-      - "8008:8081"
+      - "3001:3000"
