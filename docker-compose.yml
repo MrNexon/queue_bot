@@ -7,3 +7,5 @@ services:
       - "${PROJECT_DIR}/.env"
     ports:
       - "3001:3000"
+    volumes:
+      - "${PROJECT_DIR}/data.db:./prisma/data.db"
